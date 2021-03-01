@@ -1,0 +1,90 @@
+=======================================
+why wait-notify
+
+ wait/notify are typically used to wait for some other thread to accomplish a task, or to wait until a certain condition is satisfied
+ 
+ why:
+ when we can check state again n again or by obserber, why thread need to go in wait state?
+For example, if one thread is a repair-car repair-car thread and one thread is a accept-car-for-service thread, the accept-car-for-service
+ thread has to keep checking to see if there’s any car to accept for service. Using the wait and notify mechanism,
+  the accept-car-for-service thread could check for cars, and if it doesn’t find any it can say,
+  “Hey, I’m not going to waste my time checking for a car every few minutes.
+  I’m going to go hang out, and when a customer drives in with a car for service,
+  have him notify me so I can go back to runnable and do some work.” In other words,
+  using wait() and notify() lets one thread put itself into a “waiting room” until some other thread notifies
+  it that there’s a reason to come back out.
+
+question
+difference between releasing of lock by wait and after method completion
+
+=============================================
+why wait-notify called from sycronized block?
+
+1. wait(), notify(), and notifyAll() must be called from within a synchronized context! A thread can’t invoke a wait or notify method
+ on an object unless it owns that object’s lock.
+
+2. throw iileaglmonitor exception
+
+3. prevant race condition, notify may be unheard.
+
+
+
+   1. The Producer thread tests the condition (buffer is full or not) and confirms that it must wait (after finding buffer is full).
+
+   2. The Consumer thread sets the condition after consuming an element from a buffer.
+
+   3. The Consumer thread calls the notify () method; this goes unheard since the Producer thread is not yet waiting.
+
+   4. The Producer thread calls the wait () method and goes into waiting state.
+
+So due to race condition here we potential lost a notification and if we use buffer or just one element Produce
+ thread will be waiting forever and your program will hang.
+
+
+Any method or a block of code, if not qualified with the keyword synchronized can be executed by more than one thread at any given time
+as object's monitor(lock) is not in the picture. Where as when a method is synchronized (or there is a synchronized block) only a single
+thread who has acquired the object's monitor can access the code.
+
+=========================
+Using wait( ) in a Loop; why?
+
+
+Actually both of the previous examples (Mechanic/User and Trader/StockPriceAnalyzer) had a common problem. 
+In each one, there was at least one thread calling wait(), and another thread calling notify() or notifyAll().
+ This works well enough as long as the waiting threads have actually started waiting before the other thread executes
+  the notify() or notifyAll(). But what happens if, for example, the StockPriceAnalyzer runs first and calls notify() before the
+   Traders have started waiting? This could happen, since we can’t guarantee what order the different parts of the thread will execute in. 
+   Unfortunately, when the Traders run, they just start waiting right away. They don’t do anything to see if the event they’re waiting for
+    has already happened. So if the StockPriceAnalyzer has already called notifyAll(), it’s not going to call notifyAll() again—and the waiting 
+    Traders will keep waiting forever. This is probably not what the programmer wanted to happen. Almost always, when you want to wait for
+     something, you also need to be able to check if it has already happened. Generally the best way to solve this is to put in some sort of 
+     loop that checks on some sort of conditional expressions, and only waits if the thing you’re waiting for has not yet happened. Here’s a modified, safer version of the earlier Car & Mechanic example:
+
+
+==============================
+Why wait and notify are object method
+
+
+First of all we have to know what wait() and notify() do in order to be clear why these methods are in Object class.
+wait - wait method tells the current thread to give up monitor and go to sleep.
+notify - Wakes up a single thread that is waiting on this object's monitor.
+So you see wait() and notify() methods work at the monitor level, thread which is currently holding the monitor is asked to give up
+ that monitor through wait() method and through notify() method (or notifyAll) threads which are waiting on the object's monitor are
+  notified that threads can wake up.
+
+Important point to note here is that monitor is assigned to an object not to a particular thread. That's one reason why these methods
+ are in Object class.To reiterate threads wait on an Object's monitor (lock) and notify() is also called on an object to wake up a thread
+ waiting on the Object's monitor.
+
+wait(), notify() and notifyAll() are used for inter-thread communication. But threads themselves have no knowledge of each others status.
+ It is the shared object among the threads that acts as a communicator among the threads.
+Threads lock an object, wait on an object and notify an object. When a wait method is called it checks which thread has the lock on
+the object and that is the thread which has to give up the lock. Same way notify() method when called looks for all the thread that
+are waiting to get hold of the Object's monitor and wakes one of the thread, notifyAll() wakes up all the thread that are waiting
+on an Object's monitor.
+
+So it is the shared object among the thread which allows them to communicate with each other and wait(), notify() and notifyAll()
+ are the methods used for inter-thread communication.
+
+
+//https://www.baeldung.com/java-wait-notify

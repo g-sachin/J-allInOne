@@ -1,0 +1,29 @@
+NCS alarm processing queue example parallel processing notification
+Annotation Example - padNMS
+
+
+
+
+
+inhenritecnce : 
+command 
+  NE command
+  Unit Command
+  Port Command
+  
+
+Abstract class:
+
+xcpservicereader
+
+clientto client/otuktootuk/odusubporrs
+
+
+
+interface
+
+validator: validate
+
+createValidator
+updatevalidator
+deletevalidator

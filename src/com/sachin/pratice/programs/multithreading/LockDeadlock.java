@@ -1,15 +1,15 @@
 package com.sachin.pratice.programs.multithreading;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class LockDeadlock {
 
 	  private static ReentrantLock lock = new ReentrantLock(true);
-
+ 
 	  public static void main(String[] args)  {
 		try {
 			new LockDeadlock().check();
-			
 		}catch(Exception ex){
 			System.out.println("exception");
 			ex.printStackTrace();

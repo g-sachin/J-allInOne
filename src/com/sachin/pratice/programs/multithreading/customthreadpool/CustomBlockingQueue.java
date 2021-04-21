@@ -9,7 +9,11 @@ public class CustomBlockingQueue<Type> {
 	    /**
 	     * Implemetation using lock and condition interface:
 	     * https://java2blog.com/custom-blockingqueue-implementation-java/
+	     * Lock lock = new ReentrantLock();
+	     * Condition con = lock.newCondition();
 	     * 
+	     * con.await // wait state
+	     * con.signal //release lock
 	     */
 	    private Queue<Type> queue = new LinkedList<Type>();
 	    private int EMPTY = 0;

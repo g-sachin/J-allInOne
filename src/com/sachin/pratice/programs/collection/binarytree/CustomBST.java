@@ -320,8 +320,11 @@ public class CustomBST {
         tree.root.right.left = new Node(6);
         tree.root.right.right = new Node(7);
         
+        System.out.println("-----Diagonal Traversal----");
         tree.diagonalTraversal(tree.root);
+        System.out.println("----LEFT view----");
         tree.leftView(tree.root);
+        System.out.println("----Post order---");
         tree.postOrderTraversal(tree.root);
 		
 //		 Node root = new Node(8); 
@@ -340,10 +343,15 @@ public class CustomBST {
 		bst.insert(40);
 		bst.insert(20);
 		bst.insert(90);
+		bst.insert(35);
+		bst.insert(42);
 		
+		System.out.println("---Preorder------");
 		bst.preOrderTraversal(bst.root);
 		System.out.println("-----Inorder----------");
 		bst.inOrderTraversal();
+		System.out.println("-----Postorder----");
+		bst.postOrderTraversal(bst.root);
 
 		bst.levelOrderTraversal();
 		bst.height();

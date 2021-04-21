@@ -28,7 +28,6 @@ public class CustomArrayList<X> implements List<X>{
 	
 	@Override
 	public void add(X value) {
-
 		if(size+1 == data.length)
 			resize(data.length*2);
 		

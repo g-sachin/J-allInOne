@@ -34,6 +34,7 @@ class Task implements Runnable {
 		System.out.println(Thread.currentThread().getName()+" task started..");
 		try {
 			Thread.sleep(2000);
+			//throw new RuntimeException(); --.execute throws the exception while .submit swallow the exception(if dont call future.get)
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

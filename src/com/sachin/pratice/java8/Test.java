@@ -41,4 +41,16 @@ public class Test {
 	static {
 		int i=6;
 	}
+	
+	static class staticclass{ //Test$staticclass
+		
+	}
+	
+	class inner { //Test$inner.class
+		
+	}
+}
+
+class outside { //outside.class
+	
 }

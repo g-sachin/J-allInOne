@@ -162,7 +162,7 @@ public class CustomLinkedList {
 			slow = slow.next;
 			fast = fast.next.next;
 		}
-		System.out.println("Middle element is: "+slow.data);
+		System.out.println(Messages.getString("CustomLinkedList.test0")+slow.data); //$NON-NLS-1$
 	}
 	
 	private void hasLoop(){
@@ -173,7 +173,7 @@ public class CustomLinkedList {
 			slow = slow.next;
 			fast = fast.next.next;
 			if(slow == fast)
-				System.out.println("Found LOOP");
+				System.out.println(Messages.getString("CustomLinkedList.test1")); //$NON-NLS-1$
 		}
 	}
 	
@@ -199,7 +199,7 @@ public class CustomLinkedList {
 			return;
 		printInReverseOrder(current.next);
 		
-		System.out.print(current.data+" ");
+		System.out.print(current.data+Messages.getString("CustomLinkedList.test2")); //$NON-NLS-1$
 	}
 	
 	private void findNthNode(int pos){
@@ -214,7 +214,7 @@ public class CustomLinkedList {
 		for(int i=1; i< length-pos+1; i++){
 			temp = temp.next;
 		}
-		System.out.println("Node at positon: "+pos+" is: "+temp.data);
+		System.out.println(Messages.getString("CustomLinkedList.test3")+pos+Messages.getString("CustomLinkedList.test4")+temp.data); //$NON-NLS-1$ //$NON-NLS-2$
 	}
 	
 	private void reverse(){
@@ -236,7 +236,7 @@ public class CustomLinkedList {
 
 		while (current != null) {
 			System.out.print(current.data);
-			System.out.print(",");
+			System.out.print(Messages.getString("CustomLinkedList.test5")); //$NON-NLS-1$
 			current = current.next;
 		}
 	}
@@ -253,71 +253,71 @@ public class CustomLinkedList {
 		list.display();
 
 		// append the element at the end
-		System.out.println("  ");
-		System.out.println("----------------------");
+		System.out.println(Messages.getString("CustomLinkedList.test6")); //$NON-NLS-1$
+		System.out.println(Messages.getString("CustomLinkedList.test7")); //$NON-NLS-1$
 		list.insertAtEnd(34);
 		list.display();
 
 		// add the element at First Position
-		System.out.println("  ");
-		System.out.println("----------------------");
+		System.out.println(Messages.getString("CustomLinkedList.test8")); //$NON-NLS-1$
+		System.out.println(Messages.getString("CustomLinkedList.test9")); //$NON-NLS-1$
 		list.insertAtFirst(19);
 		list.display();
 
 		// append element at nth position
-		System.out.println("  ");
-		System.out.println("----------------------");
+		System.out.println(Messages.getString("CustomLinkedList.test10")); //$NON-NLS-1$
+		System.out.println(Messages.getString("CustomLinkedList.test11")); //$NON-NLS-1$
 		list.inserAtAnySpecificPos(2, 44);
 		list.display();
 
 		// check size of list
-		System.out.println("  ");
-		System.out.println("----------------------");
-		System.out.println("List size: " + list.size());
+		System.out.println(Messages.getString("CustomLinkedList.test12")); //$NON-NLS-1$
+		System.out.println(Messages.getString("CustomLinkedList.test13")); //$NON-NLS-1$
+		System.out.println(Messages.getString("CustomLinkedList.test14") + list.size()); //$NON-NLS-1$
 
 		// delete a node
-		System.out.println("  ");
-		System.out.println("----------------------");
+		System.out.println(Messages.getString("CustomLinkedList.test15")); //$NON-NLS-1$
+		System.out.println(Messages.getString("CustomLinkedList.test16")); //$NON-NLS-1$
 		list.deleteNode(34);
-		System.out.println("List after deleting :9: ");
-		System.out.println("List size: " + list.size());
+		System.out.println(Messages.getString("CustomLinkedList.test17")); //$NON-NLS-1$
+		System.out.println(Messages.getString("CustomLinkedList.test18") + list.size()); //$NON-NLS-1$
 		list.display();
 
 		// delete after specific position
-		System.out.println("  ");
-		System.out.println("----------------------");
+		System.out.println(Messages.getString("CustomLinkedList.test19")); //$NON-NLS-1$
+		System.out.println(Messages.getString("CustomLinkedList.test20")); //$NON-NLS-1$
 		list.deleteSpecificPos(5);
 		list.display();
 		
 		
 		//find element at Nth position
-		System.out.println("  ");
-		System.out.println("----------------------");
-        System.out.println("Element at Nth pos:from beginging: "+list.get(2).data);
+		System.out.println(Messages.getString("CustomLinkedList.test21")); //$NON-NLS-1$
+		System.out.println(Messages.getString("CustomLinkedList.test22")); //$NON-NLS-1$
+        System.out.println(Messages.getString("CustomLinkedList.test23")+list.get(2).data); //$NON-NLS-1$
 
 
         //Middle element
-		System.out.println("  ");
-		System.out.println("----------------------");
+		System.out.println(Messages.getString("CustomLinkedList.test24")); //$NON-NLS-1$
+		System.out.println(Messages.getString("CustomLinkedList.test25")); //$NON-NLS-1$
         list.findMiddle();
 		
 		
 		//Detect a loop
-		System.out.println("  ");
-		System.out.println("----------------------");
+		System.out.println(Messages.getString("CustomLinkedList.test26")); //$NON-NLS-1$
+		System.out.println(Messages.getString("CustomLinkedList.test27")); //$NON-NLS-1$
 		list.hasLoop();
 		
-        System.out.println("searched? "+list.search(4));
+        System.out.println(Messages.getString("CustomLinkedList.test28")+list.search(4)); //$NON-NLS-1$
 	
-        System.out.println("----Print List in reverse order----");
+        System.out.println(Messages.getString("CustomLinkedList.test29")); //$NON-NLS-1$
         list.printInReverseOrder();
         
-        System.out.println(" \n Nth node from last");
+        System.out.println(Messages.getString("CustomLinkedList.test30")); //$NON-NLS-1$
         list.findNthNode(4);
         
 		//REVRSE link list
 		list.reverse();
-		System.out.println(" \n Reverse linked list: ");
+		System.out.println(Messages.getString("CustomLinkedList.test31")); //$NON-NLS-1$
 		list.display();
 	}
 
@@ -334,6 +334,7 @@ public class CustomLinkedList {
 		void setNext(Node temp) {
 			this.next = temp;
 		}
+		
 		
 	}
 

@@ -13,7 +13,7 @@ public class SapientGlobal {
 
 	private void logic() {
 		List<CapitaIncome> list = new ArrayList<>();
-		List.of(new CapitaIncome("Boston", "USA", "M", 12));
+		//List.of(new CapitaIncome("Boston", "USA", "M", 12));
 		list.add(new CapitaIncome("Boston", "USA", "M", 12));
 		list.add(new CapitaIncome("hkg", "HongKong", "M", 11));
 		list.add(new CapitaIncome("Syndney", "Australia", "M", 13));

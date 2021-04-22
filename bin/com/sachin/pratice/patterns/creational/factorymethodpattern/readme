@@ -1,0 +1,19 @@
+The factory method pattern is the most used design patterns as this is one of the best ways to create an object. This design pattern comes under the creational design patterns where an object is created without exposing the creation logic to the client and it refers to a newly created object using a common interface by calling a factory method.
+In the factory method pattern, you provide an interface, which can either be an interface or an abstract class to create objects. The method in the interface yields the object creation to one or more concrete subclasses at run time. The subclasses implement the factory method to select the class whose objects need to be created.
+
+purpose: Exposes a method for creating objects, allowing subclasses to control the actual creation process.
+
+Uses
+  A class will not know what classes it will be required to create.
+  Subclasses may specify what objects should be created.
+  Parent classes wish to defer creation to their subclasses
+  
+Example
+Many applications have some form of user and group structure for security. 
+When the application needs to create a user it will typically delegate the creation of the user to multiple user implementations. The parent user object will handle most operations for each user but the subclasses will define the factory method that handles the distinctions in the creation of each type of user. A system may have AdminUser and StandardUser objects each of which extend the User object. The AdminUser object may perform some extra tasks to ensure access while the StandardUser may do the same to limit access.
+
+JDK Example
+
+PADTEC:
+ Service Validator - Create/Update/Delete ServiceValidator
+ 

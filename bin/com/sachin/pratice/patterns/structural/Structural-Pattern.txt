@@ -1,0 +1,13 @@
+Structural pattern: 
+These design patterns deal with class and object composition. The concept of inheritance is used to compose interfaces and determine ways to compose objects to get new functionalities. Adapter, Composite, Decorator, etc. are some of the examples of a structural design pattern.
+
+
+1. Adapter Pattern
+
+
+
+2. Composite Pattern
+
+
+
+3. Decorator Pattern

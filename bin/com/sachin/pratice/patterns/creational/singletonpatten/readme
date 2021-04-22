@@ -1,0 +1,10 @@
+The singleton design pattern belongs to the family of Creational design patterns where a single class is responsible to create an object while making sure that only a single object gets created. This class provides a method to access its only object which can be accessed directly without the need to instantiate the object of the class. To make the class singleton, the constructor is made as ‘private’ which assures that only the members can access the constructor. Some of the applications of the singleton pattern include cache-memory, database connection, drivers, logging, etc.
+
+
+
+Padtec:
+ClientConfig.java
+-To load config xml file
+
+Link:
+https://dzone.com/articles/all-about-the-singleton

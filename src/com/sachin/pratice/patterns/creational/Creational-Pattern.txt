@@ -1,0 +1,17 @@
+Creational pattern: 
+These design patterns give the developers an approach for creating objects while hiding the creation logic, and without instantiating objects directly using the ‘new’ operator. This gives the program more flexibility in deciding which objects need to be created for a given use case. Singleton, Factory, Builder, etc. are some of the examples of a creational design pattern.
+
+
+1. Singleton Pattern
+   a) EagerInitilization
+   b) LazyInitialization
+   c) DoubleCheckLocking
+   d) EnumSingleton
+   
+   
+ 2. Factory Design Pattern
+   a)
+   
+   
+ 3. Builder Pattern
+  

@@ -18,6 +18,23 @@ Java lifeline
 ## Binary Search Tree
 ## ArrayList
 
+# Design Pattern
+## Creation
+### Singleton
+### Factory
+
+## Behavior
+### Change of Responsibility
+### Iterator
+### Mediator
+### Observer
+
+## Structural
+### Decorator
+### Facade
+### Adaptor
+
+
 # programs
 ## Algos
 ## gfg practice

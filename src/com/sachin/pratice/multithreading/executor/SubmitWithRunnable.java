@@ -1,6 +1,5 @@
 package com.sachin.pratice.multithreading.executor;
 
-import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

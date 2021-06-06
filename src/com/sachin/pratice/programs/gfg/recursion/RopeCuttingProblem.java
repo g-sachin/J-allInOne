@@ -23,12 +23,12 @@ public class RopeCuttingProblem {
 	 *               /    \             \
 	 *              /      \             \
 	 *             /        \             \
-	 *            n=12       n=14         n=11  -- {n-a, n-b, n-c}
+	 *            n=12       n=14         n=11  -- {n-a, n-a, n-a}
 	 *           /  |  \  
 	 *          /   |   \
-	 *         n=1  n=3  n=0   [n=3, n=5, n=2]    [0, 2, -1]  ---{n-a, n-b, n-c}
+	 *         n=1  n=3  n=0   [n=3, n=5, n=2]    [0, 2, -1]  ---{n-b, n-b, n-b}
 	 * 
-	 *        [-ve]            [-ve, -ve, -ve]    [-ve, -ve, -ve]
+	 *        [-ve]            [-ve, -ve, -ve]    [-ve, -ve, -ve] ---{n-c, n-c, n-c}
 	 *        
 	 *        
 	 *        
@@ -40,7 +40,7 @@ public class RopeCuttingProblem {
 		if (num < 0)
 			return -1;
 		else {
-			int res = max(ropeCutting(num - a, a, b, c), ropeCutting(num - b, a, b, c), ropeCutting(num-c, a, b, c));
+			int res = Math.max(ropeCutting(num - a, a, b, c), Math.max(ropeCutting(num - b, a, b, c), ropeCutting(num-c, a, b, c)));
 			if (res == -1)
 				return -1;
 			return res + 1;

@@ -6,7 +6,7 @@ import java.util.Set;
 public class PairsInArray {
 
 	public static void main(String[] args) {
-		int arr[] = {13, 6, 1, 12, 0, 19, 46, 9, 5, -1, 20};
+		int arr[] = {13,-1, 6, 1, 12, 0, 19, 46, 9, 5, 20};
 		PairsInArray obj = new PairsInArray();
 		obj.find_bruteForce(arr, 19); //repeatable pair
 		obj.find_bruteForce_UniquePair(arr, 19); //unique pair

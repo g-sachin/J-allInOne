@@ -19,6 +19,33 @@ public class RandomStuff {
 		new RandomStuff().checkPassByValue();
 		new RandomStuff().testPassByValueOnObject();
 		
+		//hackerrank();
+	}
+
+	private static void hackerrank() {
+      long n = 22876792454961L;
+      List<Long> list = new ArrayList<>();
+      long p=28;
+      for(long i=1; i<=n ; i++) {
+    	  if(i <0) {
+    		  break;
+    	  }
+		  //System.out.println(i);
+
+    		  
+    	  if(n %i ==0) {
+    		  list.add(Long.valueOf(i));
+    		  System.out.println("TEST-"+i);
+    	  }
+    		  
+      }
+      System.out.println("size: "+list.size());
+      if (list.size() < p) {
+    	  System.out.println(0);
+    	  return;
+      }
+    	  
+      System.out.println(list.get((int)p-1));
 	}
 
 	private void checkPassByValue() {
@@ -36,6 +63,7 @@ public class RandomStuff {
 		list.add("api2.1");
 	}
 	
+	//https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value
 	private void testPassByValueOnObject(){
 		RandomStuff ran = new RandomStuff();
 		ran.setStr("api1");
@@ -51,6 +79,7 @@ public class RandomStuff {
 		ran.setStr("new str");
 	}
 
+	@Override
 	public String toString(){
 		return "str["+str+"]";
 	}

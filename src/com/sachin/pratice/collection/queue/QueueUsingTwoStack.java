@@ -11,7 +11,7 @@ import javax.management.RuntimeErrorException;
  * i) Push item to stack-1
  * 
  * Dequeue
- * i)Raise error if both stack1 and stack2 are empty
+ * i) Raise error if both stack1 and stack2 are empty
  * ii) IF Stack2 is empty and stack1 is non-empty - copy stack1 to stack2
  * iii) pop element from stack2
  * @author GUR40832

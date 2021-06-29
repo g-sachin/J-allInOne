@@ -26,10 +26,16 @@ public class GenerateSubSet {
 
 	private static void subSet(String str, String current, int index) {
         if(index ==str.length()) {
+        	//if(isPalindrome(current))
         	System.out.println(current+" ");
         	return;
         }
 		subSet(str, current, index+1);
 		subSet(str, current+ str.charAt(index), index+1);
+	}
+	
+	private static boolean isPalindrome(String str) {
+		String reverse = new StringBuilder(str).reverse().toString();
+		return reverse.equals(str);
 	}
 }

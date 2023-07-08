@@ -45,8 +45,7 @@ Generics provide the type safety.
 ### Adaptor
 
 
-# programs
-## Algos
+# Algos
 # Data Structure
 
 ## LinkedList

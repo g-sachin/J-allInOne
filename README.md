@@ -4,19 +4,29 @@ Following are the topics covered with examples.
 # Annotation
 
 # OOPS
+Object-oriented is the core of Java.
+The following Object oriented concepts are showcased:
+
+[OOPS Concepts](https://github.com/g-sachin/J-allInOne/tree/main/src/com/sachin/pratice/oops)
 
 # Multithreading
-## Custom Thread Pool
+
 ## Executor Framework
+The executor framework provides the Java thread pool.
+* Fixed Thread pool
+* Cache Thread pool
+* Scheduler Thread pool
+  
+## Custom Thread Pool
+
 
 # Java8
 
-# Genrics
 
-# Collections
-## Linkedlist
-## Binary Search Tree
-## ArrayList
+# Genrics
+Generics provide the type safety.
+
+
 
 # Design Pattern
 ## Creation
@@ -37,5 +47,10 @@ Following are the topics covered with examples.
 
 # programs
 ## Algos
-## gfg practice
+# Data Structure
+
+## LinkedList
+## Binary Search Tree
+## ArrayList
+
 
